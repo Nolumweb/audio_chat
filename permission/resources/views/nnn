@@ -1,0 +1,70 @@
+
+
+
+<x-app-layout>
+
+    
+
+   
+<script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.3.1.js"></script>
+@vite('resources/css/app.css')
+@vite('resources/js/app.js')
+<div id="app">
+ 
+
+   
+
+
+    
+    
+    
+    
+    
+    <agora-chat :allusers="{{ $users }}" authuserid="{{ auth()->id() }}" authuser="{{ auth()->user()->name }}"
+        agora_id="{{ env('AGORA_APP_ID') }}">
+        <button id="startAudioButton"></button>
+    </agora-chat>
+</div>   
+</x-app-layout> 
+    
+    
+    
+
+
+
+
+    
+{{-- @extends('layouts.app')
+
+@section('content')
+    <agora-chat :allusers="{{ $users }}" authuserid="{{ auth()->id() }}" authuser="{{ auth()->user()->name }}"
+        agora_id="{{ env('AGORA_APP_ID') }}" />
+@endsection --}}
+<script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.3.1.js"></script>
+@vite('resources/css/app.css')
+@vite('resources/js/app.js')
+<div id="app">
+ 
+
+   
+agorachat
+
+
+    
+    
+    
+    
+    
+    <agora-chat :allusers="{{ $users }}" authuserid="{{ auth()->id() }}" authuser="{{ auth()->user()->name }}"
+        agora_id="{{ env('AGORA_APP_ID') }}" />
+        <button id="startAudioButton"></button>
+
+    
+
+
+        
+</div>   
+    
+    
+    
+    
